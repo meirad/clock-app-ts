@@ -1,0 +1,115 @@
+#clock {
+    width: 260px;
+    height: 260px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    background-color: #ffffff6c;
+}
+  .hand {
+    width: 50%;
+    background: #fb478c;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: right center;
+    transition: all 0.05s;
+    transition-timing-function: steps(1, end);
+  }
+  
+  .hour-hand {
+    height: 3px;
+    right: 50%;
+    width: 90px;
+  }
+  
+  .minute-hand {
+    height: 2px;
+    right: 50%;
+    width: 80px;  }
+  
+  .second-hand {
+    height: 1px;
+    right: 50%;
+    width: 60px;  }
+
+    .middle-circle {
+        width: 10px;
+        height: 10px;
+        background: #fb478c;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+    .top-circle, .bottom-circle, .left-circle, .right-circle {
+        width: 10px;
+        height: 10px;
+        background: #fb478c;
+        position: absolute;
+        border-radius: 50%;
+        margin: 10px;
+    }
+    
+    .top-circle {
+        top: 0;
+        left: 45%;
+        transform: translateX(-50%);
+    }
+    
+    .bottom-circle {
+        bottom: 0;
+        left: 45%;
+        transform: translateX(-50%);
+    }
+    
+    .left-circle {
+        left: 0;
+        top: 46%;
+        transform: translateY(-50%);
+    }
+    
+    .right-circle {
+        right: 0;
+        top: 46%;
+        transform: translateY(-50%);
+    }
+
+    .oclock{
+        background-color: #fff;
+    }
+    #time{
+        margin-top: 10px;
+        font-size: 1.5rem;
+    text-align: center;
+    
+    }
+
+#loaction{
+    text-align: center;
+}
+
+li.list-group {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.368);
+    padding: 33px;
+    border-radius: 10px;
+    margin: 10px ;
+
+}
+li.list-group:hover {
+    background-color: rgb(243 240 242);
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+}
+.btn:hover {
+    border-radius: 5px;
+    transform: translateY(-5px);
+}

@@ -1,0 +1,70 @@
+.Alarm-container{
+    display: none;
+}
+.Alarm-container{
+    width: 100%;
+    justify-content: center;
+    align-items: self-start;
+}
+
+
+.alarm-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#alarm-time{
+    margin-top: 10px;
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.list-group{
+display: flex;
+justify-content: space-around;
+width: 300px;
+background-color: rgba(255, 255, 255, 0.368);
+padding: 33px;
+border-radius: 10px;
+margin: 10px ;
+}
+
+.toggle.on {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.toggle.off {
+    background-color: #808080; /* Gray */
+    color: white;
+}
+
+.alarm-btns {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#stop-alarm,
+#snooze-alarm {
+    width: 150px;
+}
+
+
+.alarm-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

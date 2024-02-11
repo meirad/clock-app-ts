@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation Example</title>
+<!--     <script src="https://cdn.tailwindcss.com"></script>
+ -->  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/clock.css">
+    <link rel="stylesheet" href="./css/Stopwatch.css">
+    <link rel="stylesheet" href="./css/alrem.css">
+
+</head>
+<body>
+    <section class="sidebar-conaiter">
+        <div class="sidebar">
+            <a class="site-title"> 
+                <img src="https://res.cloudinary.com/ouinternal/image/upload/c_scale,f_auto,w_50/v1707045562/timescape_emlfhl.png" alt="logo">
+                <h1> Time scape</h1>
+            </a>
+        </div>
+        <nav>
+            <a class="nav-link clock-regular"> <img src="img/clock-regular.svg" alt="">Clock</a>
+            <a class="nav-link alarm-regular"><img src="img/bell-regular.svg" alt="">Alarm</a>
+            <a class="nav-link stopwatch-regular "><img src="img/stopwatch-solid.svg" alt="">Stopwatch</a>
+        </nav>
+    </section>
+<main>
+<section class="clock-main-contianer"> 
+    <section class="clock-section ">
+    <div class="clock-contianer" >
+        <div id="clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="middle-circle"></div>
+            <div class="top-circle"></div>
+            <div class="bottom-circle"></div>
+            <div class="left-circle"></div>
+            <div class="right-circle"></div>
+        </div>
+        <div id="time"></div>
+        <div id="location"></div>
+    </div>
+    </section>
+    <section class="location-section">
+        <div class="input-container">
+           <input  type="serach" list="location-datalist" id="add-location" placeholder="+ Add new location"> 
+            <datalist id="location-datalist">
+            </datalist>
+      <input type="button" id="add" value="+">
+        </div>
+         <ul id="location-list">
+        </ul> 
+    </section>
+
+</section> 
+<section class="Alarm-container">
+    <div class="alarm-main">
+        <h3 id="alarm-clock"></h3>
+        <div class="alarm-input">
+            <input type="time" id="alarm-time">
+            <button class="sb"  id="set-alarm" >set Alarm</button>
+        </div>
+<ul id="alarm-list"></ul>
+            <h1></h1>
+            <div class="alarm-btns">
+                <button class="sb" id="stop-alarm">stop</button>
+                <button class="sb" id="snooze-alarm">snooze</button>
+            </div>
+</section>
+<section class="Stopwatch-container">
+    <div class="stopwatch-main">
+        <div id="Stopwatch">00:00:00</div>
+        <div id="all-btns">
+            <button class="sb" id="start-btn">start</button>
+            <button class="sb" id="stop-btn">stop</button>
+            <button class="sb" id="reset-btn">reset</button>
+        </a>
+        </div>
+        <div id="laps">
+            <ul id="lap-list"></ul>
+        </div>
+    </div>
+</section>
+</main>
+
+
+<script type="module">  
+
+const alarmclock = document.querySelector('.alarm-regular');
+const clockRegular = document.querySelector('.clock-regular');
+const clickStopwatch = document.querySelector('.stopwatch-regular');
+const showswatch = document.querySelector('.Stopwatch-container');
+const alarmpage = document.querySelector('.Alarm-container');
+const clockPage = document.querySelector('.clock-main-contianer');
+
+clickStopwatch.addEventListener('click', () => {
+    alarmpage.style.display = 'none';
+    showswatch.style.display = 'flex';
+    clockPage.style.display = 'none';
+});
+
+clockRegular.addEventListener('click', () => {
+    alarmpage.style.display = 'none';
+    showswatch.style.display = 'none';
+    clockPage.style.display = 'flex';
+});
+
+alarmclock.addEventListener('click', () => {
+    alarmpage.style.display = 'flex';
+    showswatch.style.display = 'none';
+    clockPage.style.display = 'none';
+});
+
+
+
+</script>
+
+
+
+<script src="./js/index.js" type="module"></script>
+<script src="./js/clock.js" type="module"></script>
+<script src="./js/stopwatch.js" type="module"></script>
+<script src="./js/alarm.js" type="module"></script>
+<script src="./js/miniclock.js" type="module"></script>
+
+
+
+</body>
+</html>
