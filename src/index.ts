@@ -9,11 +9,11 @@
     let country = data.results[0].country;
     let timezoneDiv: HTMLElement | null = document.getElementById('location');
 
+
     if (timezoneDiv) {
         timezoneDiv.innerText = `${city}/${country}`;
     }
-    console.log(`${timezone}/${country}`);
-    console.log(data);
+   
     return data;
 }
 

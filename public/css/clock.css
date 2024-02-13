@@ -85,10 +85,14 @@
     
     }
 
+
 #loaction{
     text-align: center;
 }
-
+#location-list{
+    overflow-x: auto;
+    height: 90vh ;
+}
 li.list-group {
     display: flex;
     justify-content: space-around;

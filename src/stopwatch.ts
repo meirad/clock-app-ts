@@ -5,10 +5,8 @@ class Stopwatch{
     constructor(){
         this.intervalId = null;
 
-        // Retrieve the saved time from local storage
         let savedTime = localStorage.getItem('Stopwatch');
 
-        // If there's a saved time, set it as the initial value of timeDiv.innerText
         if (savedTime) {
             timeDiv.innerText = savedTime;
             this.counter = this.timeToSeconds(savedTime);

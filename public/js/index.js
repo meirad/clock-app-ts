@@ -20,9 +20,6 @@ function getTimezone(lat, long) {
         if (timezoneDiv) {
             timezoneDiv.innerText = `${city}/${country}`;
         }
-        console.log(`${timezone}/${country}`);
-        console.log(data);
-        return data;
     });
 }
 function getGeo() {

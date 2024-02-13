@@ -5,7 +5,6 @@ import Timezone from 'timezone-enum';
 const app = express();
 const PORT = 3003;
 
-// Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res) => {

@@ -1,4 +1,3 @@
-
 async function getTimezones(){
     const myapi = '/api/timezones';
     const response = await fetch(myapi);
@@ -30,10 +29,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 let li = document.createElement('li');
                 li.className = 'list-group';
             
-                // Generate a unique id for the list item
                 let id = Date.now().toString();
             
-                // Store the id in the list item
                 li.setAttribute('data-id', id);
             
                 let p = document.createElement('p');
@@ -55,7 +52,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 delateBtn.addEventListener('click', () => {
                     ul.removeChild(li);
                 
-                    // Remove the list item from local storage
                     let listItems = JSON.parse(localStorage.getItem('listItems') || '[]');
                     let index = listItems.findIndex((item: { id: string; }) => item.id === id);
                     if (index !== -1) {
@@ -81,15 +77,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
 
- // Replace the existing code here
- let ul = document.getElementById('location-list') as HTMLUListElement;
- let listItems = JSON.parse(localStorage.getItem('listItems') || '[]');
- for (let item of listItems) {
-     let div = document.createElement('div');
-     div.innerHTML = item.html;
-     let li = div.firstChild as HTMLLIElement;
-     ul.appendChild(li);
- }
+
+
+
+    let ul = document.getElementById('location-list') as HTMLUListElement;
+    let listItems = JSON.parse(localStorage.getItem('listItems') || '[]');
+
+    
+    for (let item of listItems) {
+        let div = document.createElement('div');
+        div.innerHTML = item.html;
+        let li = div.firstChild as HTMLLIElement;
+        ul.appendChild(li);
+    }
         
         let lis = ul.getElementsByClassName('list-group');
         for (let i = 0; i < lis.length; i++) {
@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             delateBtn.addEventListener('click', () => {
                 ul.removeChild(li);
             
-                // Remove the list item from local storage
                 let listItems = JSON.parse(localStorage.getItem('listItems') || '[]');
                 let id = li.getAttribute('data-id');
                 let index = listItems.findIndex((item: { id: string; }) => item.id === id);

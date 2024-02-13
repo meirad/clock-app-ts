@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Geolocation Example</title>
-<!--     <script src="https://cdn.tailwindcss.com"></script>
- -->  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/clock.css">
     <link rel="stylesheet" href="./css/Stopwatch.css">
     <link rel="stylesheet" href="./css/alrem.css">
+    <link rel="stylesheet" href="./css/media.css">
 
 </head>
 <body>
+    <button class="hamburger">☰</button> 
     <section class="sidebar-conaiter">
         <div class="sidebar">
             <a class="site-title"> 
@@ -56,19 +58,21 @@
 
 </section> 
 <section class="Alarm-container">
-    <div class="alarm-main">
+<div class="alarm-main">
         <h3 id="alarm-clock"></h3>
         <div class="alarm-input">
             <input type="time" id="alarm-time">
             <button class="sb"  id="set-alarm" >set Alarm</button>
         </div>
+        <div class="alarm-btns">
+            <button class="sb" id="stop-alarm">Stop</button>
+            <button class="sb" id="snooze-alarm">Snooze</button>
+        </div>
 <ul id="alarm-list"></ul>
-            <h1></h1>
-            <div class="alarm-btns">
-                <button class="sb" id="stop-alarm">stop</button>
-                <button class="sb" id="snooze-alarm">snooze</button>
-            </div>
+    
+</div>
 </section>
+
 <section class="Stopwatch-container">
     <div class="stopwatch-main">
         <div id="Stopwatch">00:00:00</div>
@@ -113,6 +117,14 @@ alarmclock.addEventListener('click', () => {
     clockPage.style.display = 'none';
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const sidebarContainer = document.querySelector('.sidebar-container');
+
+    hamburger.addEventListener('click', function () {
+        sidebarContainer.style.display = sidebarContainer.style.display === 'block' ? 'none' : 'block';
+    });
+});
 
 
 </script>
