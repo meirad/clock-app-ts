@@ -11,11 +11,9 @@ function clock() {
         const secondDegree = ((seconds / 60) * 360) + 90;
         const minuteDegree = ((minutes / 60) * 360) + 90;
         const hourDegree = ((hours / 12) * 360) + 90;
-        // Apply transformations
         secondHand.style.transform = `rotate(${secondDegree}deg)`;
         minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
         hourHand.style.transform = `rotate(${hourDegree}deg)`;
-        // Format time for display
         const formattedHours = hours.toString().padStart(2, '0');
         const formattedMinutes = minutes.toString().padStart(2, '0');
         const formattedSeconds = seconds.toString().padStart(2, '0');

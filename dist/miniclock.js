@@ -34,9 +34,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 let ul = document.getElementById('location-list');
                 let li = document.createElement('li');
                 li.className = 'list-group';
-                // Generate a unique id for the list item
                 let id = Date.now().toString();
-                // Store the id in the list item
                 li.setAttribute('data-id', id);
                 let p = document.createElement('p');
                 p.className = 'li-time';
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 delateBtn.textContent = 'X';
                 delateBtn.addEventListener('click', () => {
                     ul.removeChild(li);
-                    // Remove the list item from local storage
                     let listItems = JSON.parse(localStorage.getItem('listItems') || '[]');
                     let index = listItems.findIndex((item) => item.id === id);
                     if (index !== -1) {
@@ -69,7 +66,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 locationInput.value = '';
             }
         });
-        // Replace the existing code here
         let ul = document.getElementById('location-list');
         let listItems = JSON.parse(localStorage.getItem('listItems') || '[]');
         for (let item of listItems) {
@@ -89,7 +85,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let delateBtn = li.getElementsByClassName('btn')[0];
             delateBtn.addEventListener('click', () => {
                 ul.removeChild(li);
-                // Remove the list item from local storage
                 let listItems = JSON.parse(localStorage.getItem('listItems') || '[]');
                 let id = li.getAttribute('data-id');
                 let index = listItems.findIndex((item) => item.id === id);
